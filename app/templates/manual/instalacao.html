@@ -1,54 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "layout.html" %}
 
-<head>
-  <title>WPLEX EE - Manutenção</title>
-  <meta charset="UTF-8"/>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
-</head>
+{% block title %} WPLEX EE - Manutenção {% endblock %}
 
-<body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><a href="/">Equipamentos<span class="logo_colour">Embarcados</span></a></h1>
-          <h2>Tudo sobre seu rastreador GPS e computador de bordo!</h2>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li><a href="/home/index">Início</a></li>
-          <li class="selected"><a href="/manual/instalacao">Instalação</a></li>
-          <li><a href="/manual/manutencao">Manutenção</a></li>
-          <li><a href="/remote/xvm">XVM Remoto</a></li>
-          <li><a href="/contact/contato">Contato</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="content_header"></div>
-    <div id="site_content">
-      <div id="sidebar_container">
+{% block body %}
+{{ super() }}
+
+<div id="site_content">
+    <div id="sidebar_container">
         <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <h3>Instalação</h3>
-            <ul>
-              <li><a href="#">Virloc</a></li>
-              <li><a href="#">MDT</a></li>
-              <li><a href="#">link 3</a></li>
-              <li><a href="#">link 4</a></li>
-            </ul>
-          </div>
-          <div class="sidebar_base"></div>
+            <div class="sidebar_top"></div>
+            <div class="sidebar_item">
+                <h3>Instalação</h3>
+                <ul>
+                    <li><a href="#">Virloc</a></li>
+                    <li><a href="#">MDT</a></li>
+                    <li><a href="#">link 3</a></li>
+                    <li><a href="#">link 4</a></li>
+                </ul>
+            </div>
+            <div class="sidebar_base"></div>
         </div>
-      </div>
-      <div id="content">
+    </div>
+    <div id="content">
         <!-- insert the page content here -->
         <h1>Guia de Instalação dos Equipamentos Embarcados</h1>
         <p>This page contains examples of all the styled elements available as part of this design. Use this page for reference, whilst you build your website.</p>
@@ -68,62 +41,56 @@
         <h2>Lists</h2>
         <p>This is an unordered list:</p>
         <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
         </ul>
         <p>This is an ordered list:</p>
         <ol>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
         </ol>
         <h2>Images</h2>
         <p>images can be placed on the left, in the center or on the right:</p>
-        <span class="left"><img src="style/graphic.png" alt="example graphic" /></span>
+        <span class="left"><img src="../../static/images/graphic.png" alt="example graphic" /></span>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum.
         </p>
-        <span class="center"><img src="style/graphic.png" alt="example graphic" /></span>
-        <span class="right"><img src="style/graphic.png" alt="example graphic" /></span>
+        <span class="center"><img src="../../static/images/graphic.png" alt="example graphic" /></span>
+        <span class="right"><img src="../../static/images/graphic.png" alt="example graphic" /></span>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
         </p>
         <h2>Tables</h2>
         <p>Tables should be used to display data and not used for laying out your website:</p>
         <table style="width:100%; border-spacing:0;">
-          <tr><th>Item</th><th>Description</th></tr>
-          <tr><td>Item 1</td><td>Description of Item 1</td></tr>
-          <tr><td>Item 2</td><td>Description of Item 2</td></tr>
-          <tr><td>Item 3</td><td>Description of Item 3</td></tr>
-          <tr><td>Item 4</td><td>Description of Item 4</td></tr>
+            <tr><th>Item</th><th>Description</th></tr>
+            <tr><td>Item 1</td><td>Description of Item 1</td></tr>
+            <tr><td>Item 2</td><td>Description of Item 2</td></tr>
+            <tr><td>Item 3</td><td>Description of Item 3</td></tr>
+            <tr><td>Item 4</td><td>Description of Item 4</td></tr>
         </table>
         <h2>Form Elements</h2>
         <form action="#" method="post">
-          <div class="form_settings">
-            <p><span>Form field example</span><input type="text" name="name" value="" /></p>
-            <p><span>Textarea example</span><textarea rows="8" cols="50" name="name"></textarea></p>
-            <p><span>Checkbox example</span><input class="checkbox" type="checkbox" name="name" value="" /></p>
-            <p><span>Dropdown list example</span><select id="id" name="name"><option value="1">Example 1</option><option value="2">Example 2</option></select></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="button" /></p>
-          </div>
+            <div class="form_settings">
+                <p><span>Form field example</span><input type="text" name="name" value="" /></p>
+                <p><span>Textarea example</span><textarea rows="8" cols="50" name="name"></textarea></p>
+                <p><span>Checkbox example</span><input class="checkbox" type="checkbox" name="name" value="" /></p>
+                <p><span>Dropdown list example</span><select id="id" name="name"><option value="1">Example 1</option><option value="2">Example 2</option></select></p>
+                <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="name" value="button" /></p>
+            </div>
         </form>
-      </div>
     </div>
-    <div id="content_footer"></div>
-    <div id="footer">
-      <p><a href="/">Início</a> | <a href="/instalacao">Instalação</a> | <a href="/manutencao">Manutenção</a> | <a href="/xvm">XVM Remoto</a> | <a href="/contato">Contato</a></p>
-      <p><a href="http://wplex.com.br/">WPLEX Software</a> © Todos os direitos resevados.</p>
-    </div>
-  </div>
-</body>
-</html>
+</div>
+
+{% endblock %}

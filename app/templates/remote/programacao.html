@@ -1,22 +1,14 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
+{% extends "layout.html" %}
 
-<head>
-    <title>simplestyle_banner - another page</title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="website description" />
-    <meta name="keywords" content="website keywords, website keywords" />
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-    <link rel="stylesheet" type="text/css" href="../../static/style.css" />
-</head>
+{% block title %} WPLEX EE - Contato {% endblock %}
 
-<body>
+{% block body %}
+{{ super() }}
 
 <div class="form_settings">
     <p><span>ID WPLEX</span><input class="contact" type="text" name="your_name" value="" /></p>
     <p><span>Arquivo</span><input class="contact" type="text" name="your_email" value="" /></p>
-    <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+    <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Enviar" /></p>
 </div>
 
-</body>
-</html>
+{% endblock %}

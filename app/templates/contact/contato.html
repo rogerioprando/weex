@@ -1,56 +1,22 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
+{% extends "layout.html" %}
 
-<head>
-  <title>simplestyle_banner - contact us</title>
-  <meta charset="UTF-8" />
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="../../static/style.css" />
-</head>
+{% block title %} WPLEX EE - Contato {% endblock %}
 
-<body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-          <div id="logo_text">
-              <!-- class="logo_colour", allows you to change the colour of the text -->
-              <h1><a href="/">Equipamentos<span class="logo_colour">Embarcados</span></a></h1>
-              <h2>Tudo sobre seu rastreador GPS e computador de bordo!</h2>
-          </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-            <li><a href="/home/index">Início</a></li>
-          <li><a href="/manual/instalacao">Instalação</a></li>
-          <li><a href="/manual/manutencao">Manutenção</a></li>
-          <li><a href="/remote/xvm">XVM Remoto</a></li>
-          <li class ="selected"><a href="/contact/contato">Contato</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="content_header"></div>
-    <div id="site_content">
-      <div id="content">
+{% block body %}
+{{ super() }}
+
+<div id="site_content">
+    <div id="content">
         <!-- insert the page content here -->
-        <h1>Contact Us</h1>
-        <p>Below is an example of how a contact form might look with this template:</p>       
-          <div class="form_settings">
-            <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
-            <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
-            <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
-          </div>       
-        <p><br /><br />NOTE: A contact form such as this would require some way of emailing the input to an email address.</p>
-      </div>
+        <h1>Fale Conosco</h1>
+        <p>Deixe abaixo seu questionamento e responderemos assim que possível.</p>
+        <div class="form_settings">
+            <p><span>Nome</span><input class="contact" type="text" name="your_name" value="" /></p>
+            <p><span>E-mail</span><input class="contact" type="text" name="your_email" value="" /></p>
+            <p><span>Mensagem</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Enviar" /></p>
+        </div>
     </div>
-    <div id="content_footer"></div>
-    <div id="footer">
-      <p><a href="/">Início</a> | <a href="/instalacao">Instalação</a> | <a href="/manutencao">Manutenção</a> | <a href="/xvm">XVM Remoto</a> | <a href="/contato">Contato</a></p>
-      <p><a href="http://wplex.com.br/">WPLEX Software</a> © Todos os direitos resevados.</p>
-    </div>
-  </div>
-</body>
-</html>
+</div>
+
+{% endblock %}
