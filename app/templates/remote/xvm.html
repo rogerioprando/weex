@@ -7,11 +7,13 @@
 {{ super() }}
 
 <div id="site_content">
-    <div id="content">
+    <div id="content" class="form_settings">
         <!-- insert the page content here -->
-        <h1>Dashboard</h1>
-        <p>Unidades Online:</p>
-        <p>etc ...</p>
+
+        <p><span>Comando</span><input type="text" name="comando" id="idComando" size="10" placeholder="Ex: QG2"/></p>
+        <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Enviar" /></p>
+        <br>
+        <p>Resposta: <br> {{ value }}</p>
     </div>
 </div>
 
